@@ -1,6 +1,6 @@
 {% set name = "awscli-cwlogs" %}
-{% set version = "1.4.5" %}
-{% set sha256 = "2fb2af9a132475094d21d383e214e70ea60adf71428adca32babe99f27290a9b" %}
+{% set version = "1.4.6" %}
+{% set sha256 = "44d2fe77d109b7b630fb8f6c06760ff6c5ec9861be16413fd5b977f5a4971f83" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
